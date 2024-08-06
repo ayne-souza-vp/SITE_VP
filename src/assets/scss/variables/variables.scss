@@ -1,0 +1,111 @@
+// Responsive
+$information-phone: 'only screen and (max-width : 320px)';
+$information-tablet: 'only screen and (max-width : 768px)';
+$information-desktop: 'only screen and (max-width : 1170px)';
+$information-wxga: 'only screen and (max-width : 1366px)';
+$information-wxga-plus: 'only screen and (max-width : 1440px)';
+$information-wsxga-plus: 'only screen and (max-width : 1680px)';
+$information-full-hd: 'only screen and (max-width : 1920px)';
+
+// Times
+$transition-duration: 0.3s;
+
+// Colors (Style Guide)
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+$colorGreen: #00E76E;
+$colorGreenOil: #002C33;
+$colorBlue: #0E4AC2;
+$colorBlueLight: #13B6D0;
+$colorGrayLight: #F2F2F2;
+$colorError: #F70808;
+
+// Primary Color
+$colorPrimary: $colorGreen;
+$colorSecondary: $colorGreenOil;
+
+// Fonts
+$fontMaven: 'Maven Pro', sans-serif;
+$fontAwesome: 'Font Awesome 5 Free';
+
+$fontSmall: 0.813rem; // 13px;
+$fontRegular: 1rem; // 16px;
+$fontMedium: 1.25rem; // 20px;
+$fontLarge: 1.5rem; // 24px;
+$fontTitle: 4rem; // 64px
+$fontExtraLarge: 6rem; // 96px;
+$fontExtraLargeResponsive: 5.375rem; // 96px;
+
+// Other fonts
+$font26: 1.625rem; // 26px;
+$font28: 1.75rem; // 28px;
+$font32: 2rem; // 32px;
+$font40: 2.5rem; // 40px;
+
+
+$fontWeightThin: 100;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightBlack: 900;
+
+
+
+// Font Icons Vale Presente
+$icomoon-font-family: "valepresente" !default;
+$icomoon-font-path: "fonts" !default;
+
+$vp-apple: unquote('"\\e932"');
+$vp-google: unquote('"\\e933"');
+$vp-calendar: unquote('"\\e900"');
+$vp-calendar-star: unquote('"\\e901"');
+$vp-give-gift: unquote('"\\e902"');
+$vp-building: unquote('"\\e903"');
+$vp-facebook: unquote('"\\e904"');
+$vp-linkedin: unquote('"\\e905"');
+$vp-instagram: unquote('"\\e906"');
+$vp-youtube: unquote('"\\e907"');
+$vp-star-angle: unquote('"\\e908"');
+$vp-star-circle: unquote('"\\e909"');
+$vp-ticket: unquote('"\\e90a"');
+$vp-shopping: unquote('"\\e90b"');
+$vp-notebook: unquote('"\\e90c"');
+$vp-money-cash: unquote('"\\e90d"');
+$vp-one-handed: unquote('"\\e90e"');
+$vp-login-1: unquote('"\\e90f"');
+$vp-login-2: unquote('"\\e910"');
+$vp-qr-code: unquote('"\\e911"');
+$vp-trophy: unquote('"\\e912"');
+$vp-credit-card: unquote('"\\e913"');
+$vp-mastercard-logo: unquote('"\\e914"');
+$vp-wallet: unquote('"\\e915"');
+$vp-star: unquote('"\\e916"');
+$vp-give-star: unquote('"\\e917"');
+$vp-store: unquote('"\\e918"');
+$vp-justice: unquote('"\\e919"');
+$vp-heart: unquote('"\\e91a"');
+$vp-share-lock: unquote('"\\e91b"');
+$vp-gift: unquote('"\\e91c"');
+$vp-gift-digital: unquote('"\\e91d"');
+$vp-products-gift: unquote('"\\e91e"');
+$vp-exclusive-card: unquote('"\\e91f"');
+$vp-gift-card: unquote('"\\e920"');
+$vp-chef: unquote('"\\e921"');
+$vp-landscape: unquote('"\\e922"');
+$vp-shopping-cart: unquote('"\\e923"');
+$vp-car-taxi: unquote('"\\e924"');
+$vp-salad: unquote('"\\e925"');
+$vp-gas-station: unquote('"\\e926"');
+$vp-health-care: unquote('"\\e927"');
+$vp-investing-banking: unquote('"\\e928"');
+$vp-diamond: unquote('"\\e929"');
+$vp-landscape-2: unquote('"\\e92a"');
+$vp-smartphone: unquote('"\\e92b"');
+$vp-chat: unquote('"\\e92c"');
+$vp-next: unquote('"\\e92d"');
+$vp-silverware: unquote('"\\e92e"');
+$vp-mastercard-logo-streamline: unquote('"\\e92f"');
+$vp-like: unquote('"\\e930"');
+$vp-twitter: unquote('"\\e931"');

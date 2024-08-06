@@ -1,0 +1,147 @@
+// Colors
+.colorBlack {
+  color: var(--colorBlack);
+}
+.colorWhite {
+  color: var(--colorWhite);
+}
+.colorGreen {
+  color: var(--colorGreen);
+}
+.colorGreenOil {
+  color: var(--colorGreenOil);
+}
+.colorBlue {
+  color: var(--colorBlue);
+}
+.colorBlueLight {
+  color: var(--colorBlueLight);
+}
+.colorGrayLight {
+  color: var(--colorGrayLight);
+}
+.colorPrimary {
+  color: var(--colorPrimary);
+}
+.colorSecondary {
+  color: var(--colorSecondary);
+}
+.colorError {
+  color: var(--colorError);
+}
+
+
+// Background
+.backgroundBlack {
+  background-color: var(--colorBlack);
+}
+.backgroundWhite {
+  background-color: var(--colorWhite);
+}
+.backgroundGreen {
+  background-color: var(--colorGreen);
+}
+.backgroundGreenOil {
+  background-color: var(--colorGreenOil);
+}
+.backgroundBlue {
+  background-color: var(--colorBlue);
+}
+.backgroundBlueLight {
+  background-color: var(--colorBlueLight);
+}
+.backgroundGrayLight {
+  background-color: var(--colorGrayLight);
+}
+.backgroundPrimary {
+  background-color: var(--colorPrimary);
+}
+.backgroundSecondary {
+  background-color: var(--colorSecondary);
+}
+
+
+// Font Size
+.f-s-small {
+  font-size: var(--fontSmall);
+}
+.f-s-regular {
+  font-size: var(--fontRegular);
+}
+.f-s-medium {
+  font-size: var(--fontMedium);
+}
+.f-s-large {
+  font-size: var(--fontLarge);
+}
+.f-s-title {
+  font-size: var(--fontTitle);
+}
+.f-s-extraLarge {
+  font-size: var(--fontExtraLarge);
+}
+.f-s-extraLargerResponsive {
+  font-size: var(--fontExtraLargeResponsive);
+}
+
+.f-s-26 {
+  font-size: var(--font26);
+}
+.f-s-28 {
+  font-size: var(--font28);
+}
+.f-s-32 {
+  font-size: var(--font32);
+}
+.f-s-40 {
+  font-size: var(--font40);
+}
+
+
+// Font Weight
+.f-w-thin {
+  font-weight: var(--fontWeightThin);
+}
+.f-w-light {
+  font-weight: var(--fontWeightLight);
+}
+.f-w-regular {
+  font-weight: var(--fontWeightRegular);
+}
+.f-w-medium {
+  font-weight: var(--fontWeightMedium);
+}
+.f-w-semiBold {
+  font-weight: var(--fontWeightSemiBold);
+}
+.f-w-bold {
+  font-weight: var(--fontWeightBold);
+}
+.f-w-black {
+  font-weight: var(--fontWeightBlack);
+}
+
+
+// Buttons:
+.buttonGreenWhite {
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+
+  &:hover {
+    // background-color: var(--colorPrimary);
+    background-color: rgb(from var(--colorPrimary) r g b / 90%);
+    cursor: pointer;
+  }
+}
+
+
+
+// reset
+.btn {
+  border-radius: 22px;
+  height: 44px;
+  padding: 0 0.75rem;
+  &:hover {
+    opacity: 0.9;
+  }
+}

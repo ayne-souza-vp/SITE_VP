@@ -1,0 +1,296 @@
+<vp-full-loading [loading]="loading"></vp-full-loading>
+<div class="contact">
+  <div class="container">
+    <h1 class="f-w-black f-s-title colorSecondary">
+      Solicite uma demonstração
+    </h1>
+    <p class="f-s-large colorSecondary f-w-regular container__subtitle">
+      Descubra como a Vale Presente pode transformar sua empresa!
+    </p>
+    <p class="f-s-large colorSecondary f-w-regular container__text">
+      Preencha o formulário abaixo para solicitar uma demonstração personalizada
+      e conhecer todas as vantagens de nossas soluções em cartões físicos e
+      digitais Mastercard.
+    </p>
+
+    <div class="container__form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label for="fullName" class="form-label colorSecondary f-s-large"
+                >Nome completo</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fullName"
+                aria-describedby="fullNameHelp"
+                formControlName="fullName"
+              />
+
+              @if(contactForm.controls['fullName'].touched &&
+              contactForm.controls['fullName'].hasError('required')) {
+              <div id="fullNameHelp" class="form-text colorError">
+                {{ getErrorFullName() }}
+              </div>
+              }
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label for="email" class="form-label colorSecondary f-s-large"
+                >E-mail profissional</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                formControlName="email"
+              />
+              @if (contactForm.controls['email'].touched &&
+              contactForm.controls['email'].hasError('required')) {
+              <div id="emailHelp" class="form-text colorError">
+                O e-mail é obrigatório
+              </div>
+              } @if (contactForm.controls['email'].touched &&
+              contactForm.controls['email'].hasError('email')) {
+              <div id="emailHelp" class="form-text colorError">
+                Informe um email válido
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="mb-3 form-group">
+              <label for="phone" class="form-label colorSecondary f-s-large"
+                >Número de celular</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                aria-describedby="phoneHelp"
+                formControlName="phone"
+                mask="(00) 0 0000-0000"
+              />
+              @if (contactForm.controls['phone'].touched &&
+              contactForm.controls['phone'].hasError('required')) {
+              <div id="phoneHelp" class="form-text colorError">
+                O número de celular é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label for="product" class="form-label colorSecondary f-s-large"
+                >Qual produto você tem interesse em conhecer?</label
+              >
+              <select
+                class="form-select form-control"
+                formControlName="product"
+              >
+                @for(option of optionsProducts; track option.value) {
+                <option [value]="option.name">{{ option.name }}</option>
+                }
+              </select>
+
+              @if (contactForm.controls['product'].touched &&
+              contactForm.controls['product'].hasError('required')) {
+              <div id="productHelp" class="form-text colorError">
+                O produto é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label
+                for="companyName"
+                class="form-label colorSecondary f-s-large"
+                >Nome da empresa</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                aria-describedby="companyNameHelp"
+                formControlName="companyName"
+              />
+              @if (contactForm.controls['companyName'].touched &&
+              contactForm.controls['companyName'].hasError('required')) {
+              <div id="companyNameHelp" class="form-text colorError">
+                O nome da empresa é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label
+                for="companyFederalId"
+                class="form-label colorSecondary f-s-large"
+                >CNPJ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="companyFederalId"
+                aria-describedby="companyFederalIdHelp"
+                formControlName="companyFederalId"
+                mask="00.000.000/0000-00"
+                (input)="onCnpjInput()"
+              />
+              @if (contactForm.controls['companyFederalId'].touched &&
+              contactForm.controls['companyFederalId'].hasError('required')) {
+              <div id="companyFederalIdHelp" class="form-text colorError">
+                O CNPJ é obrigatório
+              </div>
+              } @if (cnpjError) {
+              <div id="companyFederalIdHelp" class="form-text colorError">
+                {{ cnpjError }}
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label
+                for="companyArea"
+                class="form-label colorSecondary f-s-large"
+                >Sua área</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="companyArea"
+                aria-describedby="companyAreaHelp"
+                formControlName="companyArea"
+              />
+              @if (contactForm.controls['companyArea'].touched &&
+              contactForm.controls['companyArea'].hasError('required')) {
+              <div id="companyAreaHelp" class="form-text colorError">
+                O área é obrigatória
+              </div>
+              }
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label for="office" class="form-label colorSecondary f-s-large"
+                >Seu cargo</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="office"
+                aria-describedby="officeHelp"
+                formControlName="office"
+              />
+              @if (contactForm.controls['office'].touched &&
+              contactForm.controls['office'].hasError('required')) {
+              <div id="officeHelp" class="form-text colorError">
+                O e-mail é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label
+                for="collaboratorsNumber"
+                class="form-label colorSecondary f-s-large"
+                >Número de colaboradores
+              </label>
+
+              <select
+                class="form-select form-control"
+                formControlName="collaboratorsNumber"
+              >
+                @for(collaborator of arrayNumberCollaborators; track
+                collaborator.value) {
+                <option [value]="collaborator.name">
+                  {{ collaborator.name }}
+                </option>
+                }
+              </select>
+
+              @if (contactForm.controls['collaboratorsNumber'].touched &&
+              contactForm.controls['collaboratorsNumber'].hasError('required'))
+              {
+              <div id="collaboratorsNumberHelp" class="form-text colorError">
+                O número de colaboradores é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3 form-group">
+              <label
+                for="companySite"
+                class="form-label colorSecondary f-s-large"
+                >Site da empresa</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="companySite"
+                aria-describedby="companySiteHelp"
+                formControlName="companySite"
+              />
+              @if (contactForm.controls['companySite'].touched &&
+              contactForm.controls['companySite'].hasError('required')) {
+              <div id="companySiteHelp" class="form-text colorError">
+                O site da empresa é obrigatório
+              </div>
+              }
+            </div>
+          </div>
+          <div class="col-12 col-md-12">
+            <div class="mb-3 form-group">
+              <label for="message" class="form-label colorSecondary f-s-large"
+                >Mensagem</label
+              >
+              <textarea
+                class="form-control"
+                id="message"
+                aria-describedby="messageHelp"
+                formControlName="message"
+                rows="5"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col">
+            <button
+              class="container__form__button f-s-large f-w-medium"
+              type="submit"
+              [disabled]="!contactForm.valid"
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

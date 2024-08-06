@@ -1,0 +1,18 @@
+.tag {
+  padding: 2px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 0 2px;
+  &.vp {
+    background-color: rgb(from var(--colorBlueLight) r g b / 20%);
+  }
+  &.vb {
+    background-color: rgb(from var(--colorGreen) r g b / 20%);
+  }
+  &.pat {
+    background-color: rgb(from var(--colorSecondary) r g b / 20%);
+  }
+  p {
+
+  }
+}

@@ -1,0 +1,45 @@
+<section class="banner d-flex">
+  <div class="container">
+    <div class="col-12 p-0 banner__background">
+      <div class="col-lg-7 col-12 banner__content">
+        <h1 class="banner__content__title colorWhite f-w-bold">
+          O <span class="colorPrimary f-w-bold">vale</span> perfeito <br />
+          para sua empresa
+        </h1>
+        <p class="banner__content__description colorWhite f-s-medium">
+          Soluções em cartões personalizáveis para
+          <span class="f-w-semiBold"
+            >campanhas de incentivo, premiações, promoções e benefícios
+            corporativos</span
+          >. Praticidade para a empresa e liberdade para os colaboradores e
+          clientes.
+        </p>
+        <form
+          class="banner__content__form d-flex"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+        >
+          <input
+            class="form-control banner__content__form__input mr-2"
+            placeholder="e-mail corporativo"
+            type="email"
+            name="email"
+            formControlName="email"
+            id="email"
+          />
+          <button
+            class="btn banner__content__form__button"
+            type="submit"
+            [disabled]="!contactForm.valid"
+          >
+            Solicitar demonstração
+          </button>
+        </form>
+        <p class="banner__content__politics colorWhite f-s-regular">
+          Concordo em receber comunicações e estou de acordo com a Política de
+          Privacidade e Termos de Uso da Vale Presente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

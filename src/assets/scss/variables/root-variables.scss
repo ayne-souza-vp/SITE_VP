@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+@mixin rootVariables() {
+	:root {
+		// Responsive
+		--information-phone: #{$information-phone};
+		--information-tablet: #{$information-tablet};
+		--information-desktop: #{$information-desktop};
+		--information-wxga: #{$information-wxga};
+		--information-wxga-plus: #{$information-wxga-plus};
+		--information-wsxga-plus: #{$information-wsxga-plus};
+		--information-full-hd: #{$information-full-hd};
+
+		// Times
+		--transition-duration: #{$transition-duration};
+
+		// HEX - Colors (Style Guide)
+    --colorBlack: #{$colorBlack};
+    --colorWhite: #{$colorWhite};
+    --colorGreen: #{$colorGreen};
+    --colorGreenOil: #{$colorGreenOil};
+    --colorBlue: #{$colorBlue};
+    --colorBlueLight: #{$colorBlueLight};
+    --colorGrayLight: #{$colorGrayLight};
+    --colorPrimary: #{$colorPrimary};
+    --colorSecondary: #{$colorSecondary};
+    --colorError: #{$colorError};
+
+		// Fonts
+		--fontMaven: #{$fontMaven};
+		--fontAwesome: #{$fontAwesome};
+
+		--fontSmall: #{$fontSmall};
+		--fontRegular: #{$fontRegular};
+		--fontMedium: #{$fontMedium};
+		--fontLarge: #{$fontLarge};
+    --fontTitle: #{$fontTitle};
+		--fontExtraLarge: #{$fontExtraLarge};
+		--fontExtraLargeResponsive: #{$fontExtraLargeResponsive};
+
+    --font26: #{$font26};
+    --font28: #{$font28};
+    --font32: #{$font32};
+    --font40: #{$font40};
+
+		--fontWeightThin: #{$fontWeightThin};
+		--fontWeightLight: #{$fontWeightLight};
+		--fontWeightRegular: #{$fontWeightRegular};
+		--fontWeightMedium: #{$fontWeightMedium};
+		--fontWeightSemiBold: #{$fontWeightSemiBold};
+		--fontWeightBold: #{$fontWeightBold};
+		--fontWeightBlack: #{$fontWeightBlack};
+
+		@content;
+	}
+}

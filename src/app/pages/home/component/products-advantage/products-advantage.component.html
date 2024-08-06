@@ -1,0 +1,44 @@
+<section class="products-advantage backgroundGrayLight">
+  <div class="container">
+    <div class="row products-advantage__titleImage d-flex align-items-center">
+      <div class="col products-advantage__titleImage__title px-0">
+        <h2 class="f-s-title f-w-black colorBlue">
+          Vantagens que fazem a diferença
+        </h2>
+        <p class="colorSecondary f-s-28">
+          Gerencie com praticidade, use com liberdade.
+        </p>
+      </div>
+      <div class="col products-advantage__titleImage__image px-0">
+        <figure>
+          <img
+            src="assets/img/vantagens.png"
+            alt="Vantagens que fazem a diferença"
+          />
+        </figure>
+      </div>
+    </div>
+    <div class="row products-advantage__items">
+      <div class="col products-advantage__items__company">
+        <h3
+          class="colorSecondary f-w-bold f-s-32 products-advantage__items__company__title"
+        >
+          Para a empresa
+        </h3>
+        @for (item of itemCompany; track item.title) {
+        <vp-item-products-advantage [item]="item"></vp-item-products-advantage>
+        }
+      </div>
+      <div class="col products-advantage__items__collaborator">
+        <h3
+          class="colorSecondary f-w-bold f-s-32 products-advantage__items__collaborator__title"
+        >
+          Para o colaborador
+        </h3>
+        @for (item of itemCollaborator; track item.title) {
+        <vp-item-products-advantage [item]="item"></vp-item-products-advantage>
+        }
+      </div>
+    </div>
+  </div>
+</section>

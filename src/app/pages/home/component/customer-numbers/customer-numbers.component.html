@@ -1,0 +1,61 @@
+<section class="customer-numbers backgroundBlue">
+  <div class="container">
+    <h2 class="f-s-title colorWhite f-w-black text-center">
+      De <span class="colorPrimary f-w-black">Vale</span>, a gente entende!
+    </h2>
+    <div class="customer-numbers__content d-flex justify-content-around">
+      @for(item of numbers; track item.description) {
+      <vp-card-numbers [number]="item"></vp-card-numbers>
+      }
+    </div>
+
+    <h3 class="f-s-title colorWhite f-w-black f-s-40 text-center">
+      A escolha das empresas inovadoras
+    </h3>
+    <div
+      class="customer-numbers__customers d-flex justify-content-center align-items-center"
+    >
+      <div class="carousel-container">
+        <button
+          class="soluctions__content__carousel__action"
+          (click)="previous()"
+          [disabled]="!canGoPrevious()"
+        >
+          <i class="vp-next rotate-180"></i>
+        </button>
+
+        <div class="carousel-wrapper">
+          <div class="carousel" [style.transform]="transform">
+            @for (item of customers; track item.name) {
+            <div class="card">
+              <figure>
+                <img
+                  [src]="'assets/img/customers/' + item.image + '.png'"
+                  [alt]="item.name"
+                />
+              </figure>
+            </div>
+            }
+          </div>
+        </div>
+
+        <button
+          class="soluctions__content__carousel__action"
+          (click)="next()"
+          [disabled]="!canGoNext()"
+        >
+          <i class="vp-next"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="w-100 text-center">
+      <input
+        type="button"
+        value="Solicte uma proposta"
+        class="btn buttonGreenWhite button-customer f-s-large f-w-medium"
+        routerLink="/contact"
+      />
+    </div>
+  </div>
+</section>

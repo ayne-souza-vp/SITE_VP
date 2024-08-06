@@ -1,0 +1,12 @@
+.fullScreenLoading {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1031;
+}

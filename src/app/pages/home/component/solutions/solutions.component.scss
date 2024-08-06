@@ -1,0 +1,87 @@
+.soluctions {
+  padding: 70px 0 90px;
+  background-color: var(--colorWhite);
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+
+    .soluctions__content__carousel__action {
+      font-size: 50px;
+      color: rgb(from var(--colorPrimary) r g b / 100%);
+      width: 62px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      border: none;
+      background: none;
+      &:disabled {
+        color: rgb(from var(--colorPrimary) r g b / 30%);
+      }
+      .rotate-180 {
+        transform: rotate(180deg);
+        display: block;
+      }
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+
+        .card {
+          border: none;
+          box-sizing: border-box;
+          padding: 10px;
+          flex-direction: column;
+
+          vp-card-soluctions {
+            height: 100%;
+          }
+
+          &.hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex: 0 0 25%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 768px) {
+  .soluctions__content {
+    h2 {
+      text-align: center;
+    }
+    .card {
+      flex: 0 0 100%;
+    }
+  }
+}
+

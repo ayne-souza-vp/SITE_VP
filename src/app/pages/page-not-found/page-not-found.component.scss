@@ -1,0 +1,16 @@
+.page-not-found {
+  min-height: 65vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  p {
+    margin-top: 20px;
+  }
+  .page-not-found__content__button {
+    height: 64px;
+    border-radius: 32px;
+    border: none;
+    padding: 0 40px;
+    margin-top: 50px;
+  }
+}

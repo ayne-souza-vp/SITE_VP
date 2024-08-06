@@ -1,0 +1,15 @@
+.customer-numbers__content__card {
+  width: 288px;
+  height: 257px;
+  background-color: rgb(from var(--colorBlueLight) r g b / 20%);
+  border: none;
+  border-radius: 30px;
+  .card-icon {
+    font-size: 40px;
+  }
+  .card-text {
+    max-width: 210px;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

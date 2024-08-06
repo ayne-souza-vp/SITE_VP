@@ -1,0 +1,290 @@
+@import '../variables/variables.scss';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('../../fonts/#{$icomoon-font-family}/#{$icomoon-font-family}.eot?t9ltlt');
+  src:  url('../../fonts/#{$icomoon-font-family}/#{$icomoon-font-family}.eot?t9ltlt#iefix') format('embedded-opentype'),
+    url('../../fonts/#{$icomoon-font-family}/#{$icomoon-font-family}.ttf?t9ltlt') format('truetype'),
+    url('../../fonts/#{$icomoon-font-family}/#{$icomoon-font-family}.woff?t9ltlt') format('woff'),
+    url('../../fonts/#{$icomoon-font-family}/#{$icomoon-font-family}.svg?t9ltlt##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vp-apple {
+  &:before {
+    content: $vp-apple;
+  }
+}
+.vp-google {
+  &:before {
+    content: $vp-google;
+  }
+}
+.vp-calendar {
+  &:before {
+    content: $vp-calendar;
+  }
+}
+.vp-calendar-star {
+  &:before {
+    content: $vp-calendar-star;
+  }
+}
+.vp-give-gift {
+  &:before {
+    content: $vp-give-gift;
+  }
+}
+.vp-building {
+  &:before {
+    content: $vp-building;
+  }
+}
+.vp-facebook {
+  &:before {
+    content: $vp-facebook;
+  }
+}
+.vp-linkedin {
+  &:before {
+    content: $vp-linkedin;
+  }
+}
+.vp-instagram {
+  &:before {
+    content: $vp-instagram;
+  }
+}
+.vp-youtube {
+  &:before {
+    content: $vp-youtube;
+  }
+}
+.vp-star-angle {
+  &:before {
+    content: $vp-star-angle;
+  }
+}
+.vp-star-circle {
+  &:before {
+    content: $vp-star-circle;
+  }
+}
+.vp-ticket {
+  &:before {
+    content: $vp-ticket;
+  }
+}
+.vp-shopping {
+  &:before {
+    content: $vp-shopping;
+  }
+}
+.vp-notebook {
+  &:before {
+    content: $vp-notebook;
+  }
+}
+.vp-money-cash {
+  &:before {
+    content: $vp-money-cash;
+  }
+}
+.vp-one-handed {
+  &:before {
+    content: $vp-one-handed;
+  }
+}
+.vp-login-1 {
+  &:before {
+    content: $vp-login-1;
+  }
+}
+.vp-login-2 {
+  &:before {
+    content: $vp-login-2;
+  }
+}
+.vp-qr-code {
+  &:before {
+    content: $vp-qr-code;
+  }
+}
+.vp-trophy {
+  &:before {
+    content: $vp-trophy;
+  }
+}
+.vp-credit-card {
+  &:before {
+    content: $vp-credit-card;
+  }
+}
+.vp-mastercard-logo {
+  &:before {
+    content: $vp-mastercard-logo;
+  }
+}
+.vp-wallet {
+  &:before {
+    content: $vp-wallet;
+  }
+}
+.vp-star {
+  &:before {
+    content: $vp-star;
+  }
+}
+.vp-give-star {
+  &:before {
+    content: $vp-give-star;
+  }
+}
+.vp-store {
+  &:before {
+    content: $vp-store;
+  }
+}
+.vp-justice {
+  &:before {
+    content: $vp-justice;
+  }
+}
+.vp-heart {
+  &:before {
+    content: $vp-heart;
+  }
+}
+.vp-share-lock {
+  &:before {
+    content: $vp-share-lock;
+  }
+}
+.vp-gift {
+  &:before {
+    content: $vp-gift;
+  }
+}
+.vp-gift-digital {
+  &:before {
+    content: $vp-gift-digital;
+  }
+}
+.vp-products-gift {
+  &:before {
+    content: $vp-products-gift;
+  }
+}
+.vp-exclusive-card {
+  &:before {
+    content: $vp-exclusive-card;
+  }
+}
+.vp-gift-card {
+  &:before {
+    content: $vp-gift-card;
+  }
+}
+.vp-chef {
+  &:before {
+    content: $vp-chef;
+  }
+}
+.vp-landscape {
+  &:before {
+    content: $vp-landscape;
+  }
+}
+.vp-shopping-cart {
+  &:before {
+    content: $vp-shopping-cart;
+  }
+}
+.vp-car-taxi {
+  &:before {
+    content: $vp-car-taxi;
+  }
+}
+.vp-salad {
+  &:before {
+    content: $vp-salad;
+  }
+}
+.vp-gas-station {
+  &:before {
+    content: $vp-gas-station;
+  }
+}
+.vp-health-care {
+  &:before {
+    content: $vp-health-care;
+  }
+}
+.vp-investing-banking {
+  &:before {
+    content: $vp-investing-banking;
+  }
+}
+.vp-diamond {
+  &:before {
+    content: $vp-diamond;
+  }
+}
+.vp-landscape-2 {
+  &:before {
+    content: $vp-landscape-2;
+  }
+}
+.vp-smartphone {
+  &:before {
+    content: $vp-smartphone;
+  }
+}
+.vp-chat {
+  &:before {
+    content: $vp-chat;
+  }
+}
+.vp-next {
+  &:before {
+    content: $vp-next;
+  }
+}
+.vp-silverware {
+  &:before {
+    content: $vp-silverware;
+  }
+}
+.vp-mastercard-logo-streamline {
+  &:before {
+    content: $vp-mastercard-logo-streamline;
+  }
+}
+.vp-like {
+  &:before {
+    content: $vp-like;
+  }
+}
+.vp-twitter {
+  &:before {
+    content: $vp-twitter;
+  }
+}
+

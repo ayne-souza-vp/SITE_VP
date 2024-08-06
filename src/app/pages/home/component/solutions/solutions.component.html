@@ -1,0 +1,34 @@
+<section class="soluctions d-flex">
+  <div class="container soluctions__content">
+    <h2 class="f-s-title colorBlue f-w-black">Nossas Soluções</h2>
+    <div class="soluctions__content__carousel">
+      <div class="carousel-container">
+        <button
+          class="soluctions__content__carousel__action"
+          (click)="previous()"
+          [disabled]="!canGoPrevious()"
+        >
+          <i class="vp-next rotate-180"></i>
+        </button>
+
+        <div class="carousel-wrapper">
+          <div class="carousel" [style.transform]="transform">
+            @for (item of soluctions; track item.title) {
+            <div class="card">
+              <vp-card-soluctions [item]="item"></vp-card-soluctions>
+            </div>
+            }
+          </div>
+        </div>
+
+        <button
+          class="soluctions__content__carousel__action"
+          (click)="next()"
+          [disabled]="!canGoNext()"
+        >
+          <i class="vp-next"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

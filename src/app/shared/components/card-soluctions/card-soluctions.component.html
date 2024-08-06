@@ -1,0 +1,24 @@
+<div class="card-body">
+  <h5 class="card-title mb-4">
+    <i [class]="item?.icon + ' colorPrimary me-2'"></i>
+    <span class="f-s-large f-w-bold colorSecondary">{{ item?.title }}</span>
+  </h5>
+  <p class="card-text f-s-medium colorSecondary mb-4">
+    {{ item?.description }}
+  </p>
+  <div class="card-links d-flex justify-content-between">
+    <a
+      routerLink="/contact"
+      routerLinkActive="router-link-active"
+      class="card-link colorBlue"
+    >
+      Quero conhecer
+      <i class="bi bi-arrow-right colorBlue"></i>
+    </a>
+    <div class="card-tags">
+      @for (tag of item?.tags; track tag) {
+      <vp-tag [type]="tag"></vp-tag>
+      }
+    </div>
+  </div>
+</div>
